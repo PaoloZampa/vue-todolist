@@ -40,9 +40,7 @@ createApp({
         }
     },
     methods: {
-        completeTask(i) {/* 
-            this.completedTask.push(this.tasks[i]);
-            console.log(this.completedTask); */
+        completeTask(i) {
             this.tasks.splice(i, 1);
         }
     }
