@@ -20,8 +20,13 @@
 
     <div id="app">
         <ul>
-            <li v-for="(task, index) in tasks" :class="task.done == true ? 'text-decoration-line-through' : ''">
-                {{task.text}}</li>
+            <li class="d-flex" v-for="(task, index) in tasks" :class="task.done == true ? 'text-decoration-line-through' : ''">
+                {{task.text}}
+                <div class="complete" @click="completeTask(index)">
+                    <i class="fa-solid fa-circle-xmark px-1"></i>
+                </div>
+            </li>
+
         </ul>
     </div>
 

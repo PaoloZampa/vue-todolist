@@ -40,6 +40,10 @@ createApp({
         }
     },
     methods: {
-
+        completeTask(i) {/* 
+            this.completedTask.push(this.tasks[i]);
+            console.log(this.completedTask); */
+            this.tasks.splice(i, 1);
+        }
     }
 }).mount('#app')
