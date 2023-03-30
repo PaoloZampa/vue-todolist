@@ -21,12 +21,13 @@
     <div id="app">
 
         <div class="add_task">
-            <input type="text" v-model.trim="newTask" @keyup.enter="addTasks()">
+            <input type="text" v-model.trim="newTask.text" @keyup.enter="addTasks()">
             <button @click="addTasks()">Add</button>
         </div>
 
         <ul>
-            <li class="d-flex" v-for="(task, index) in tasks" :class="task.done == true ? 'text-decoration-line-through' : ''">
+            <li class="d-flex" v-for="(task, index) in tasks"
+                :class="task.done == true ? 'text-decoration-line-through' : ''">
                 {{task.text}}
                 <div class="complete" @click="completeTask(index)">
                     <i class="fa-solid fa-circle-xmark px-1"></i>

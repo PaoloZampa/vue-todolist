@@ -18,7 +18,11 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            newTask: '',
+            newTask: {
+                text: '',
+                done: false
+            },
+
             tasks: [
                 {
                     text: 'Scendere il cane',
@@ -42,6 +46,22 @@ createApp({
     methods: {
         completeTask(i) {
             this.tasks.splice(i, 1);
-        }
+        },
+        addTasks() {
+
+            //pushare in tasks il valore di newTask
+            console.log(this.newTask);
+            if (this.newTask.length <= 0) {
+                alert('Non puoi scrivere una task VUOTA! PORCOSCHIFO!')
+            } else {
+                const newTask = {
+                    text: this.newTask.text,
+                    done: false
+                }
+                this.tasks.unshift(newTask);
+            }
+            this.newTask.text = '';
+
+        },
     }
 }).mount('#app')
