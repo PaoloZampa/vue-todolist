@@ -63,5 +63,9 @@ createApp({
             this.newTask.text = '';
 
         },
+        invert() {
+            console.log('porcoddinci');
+            
+        }
     }
 }).mount('#app')
