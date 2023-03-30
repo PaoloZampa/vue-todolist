@@ -12,3 +12,34 @@ Bonus:
 oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 Buon divertimento e confermate lettura come al solito :baby-yoda: :vue: */
+
+const { createApp } = Vue
+
+createApp({
+    data() {
+        return {
+            newTask: '',
+            tasks: [
+                {
+                    text: 'Scendere il cane',
+                    done: false,
+                },
+                {
+                    text: 'Scendere il piccione',
+                    done: false,
+                },
+                {
+                    text: 'Scendere il cinghiale',
+                    done: false,
+                },
+                {
+                    text: 'Scendere il fenicottero',
+                    done: false,
+                },
+            ],
+        }
+    },
+    methods: {
+
+    }
+}).mount('#app')
