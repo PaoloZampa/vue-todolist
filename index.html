@@ -27,7 +27,7 @@
 
         <ul>
             <li class="d-flex" v-for="(task, index) in tasks"
-                :class="task.done == true ? 'text-decoration-line-through' : ''" @click="invert()">
+                :class="task.done == true ? 'text-decoration-line-through' : ''" @click="this.tasks[index].done = true">
                 {{task.text}}
                 <div class="complete" @click="completeTask(index)">
                     <i class="fa-solid fa-circle-xmark px-1"></i>
